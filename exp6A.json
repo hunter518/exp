@@ -1,0 +1,44 @@
+{
+    "student": [
+        {
+            "name": "Monty",
+            "Age": 21,
+            "Email": "monty676@gmail.com",
+            "City":"Delhi"
+        },
+        {
+            "name": "Jay",
+            "Age": 21,
+            "Email": "jay67698@gmail.com",
+            "City":"Ratnagiri"
+        },
+        {
+            "name": "Vikas",
+            "Age": 20,
+            "Email": "vicky606@gmail.com",
+            "City":"Patna"
+        }
+    ],
+    "employee":[{
+            "name": "Bharat Patil",
+            "Age": 40,
+            "Email": "bharat.patil@gmail.com",
+            "City":"Delhi",
+            "Dept":"IT"
+        },
+        {
+            "name": "Girish Kumar",
+            "Age": 30,
+            "Email": "kumar215@gmail.com",
+            "City":"Gujrat",
+            "Dept":"COMP"
+        },
+        {
+            "name": "Ganesh Mali",
+            "Age": 35,
+            "Email": "mali.ganesh574@gmail.com",
+            "City":"Dapoli",
+            "Dept":"IT"
+        }
+    ]
+}
