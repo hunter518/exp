@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: teal;
+        }
+        nav{
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        h2{
+            text-shadow: 1px 1px 4px royalblue;
+        }
+        .data{
+            margin-top: 10px;
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+            align-content: center;
+        }
+        .box{
+            margin-top: 20px;
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+            align-content: center;
+        }
+        button{
+            padding: 10px 20px;
+            border: none;
+            background-color: sandybrown;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            transition: 1s;
+        }
+        button:hover{
+            color: white;
+            background-color: black;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>AJAX + JASON</h2>
+        </nav>
+    </header>
+    <div class="data" id="data"></div>
+    <div class="box">
+        <button type="submit" onclick="student()">Load Student Data</button>
+        <button type="submit" onclick="employee()">Load Employee Data</button>
+    </div>
+    <script>
+        function student(){
+            var url ='/exp6A.json';
+            var request;
+            if(window.XMLHttpRequest){
+                request = new XMLHttpRequest();
+            }
+            else if(window.ActiveXObject){
+                request = new ActiveXObject();
+            }
+            request.onreadystatechange = function(){
+                if(request.readyState == 4){
+                    var jsObj = JSON.parse(request.responseText);
+                    var dt = jsObj.student;
+                    console.log(dt);
+                    dt.forEach(element => {
+                        document.getElementById("data") ="<tr><td>"+element.name+"</td><td>"+element.Age+"</td><td>"+element.Email+"</td><td>"+element.City+"</td></tr>" 
+                    });
+                }
+            }
+        }
+    </script>
+</body>
+</html>
